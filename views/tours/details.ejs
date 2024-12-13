@@ -1,0 +1,10 @@
+<section>
+    <h1><%= tour.name %></h1>
+    <img src="<%= tour.image %>" alt="<%= tour.name %>">
+    <p><%= tour.description %></p>
+    <p>Price: $<%= tour.price %></p>
+    <form action="/tours/booking" method="POST">
+      <button type="submit">Book This Tour</button>
+    </form>
+  </section>
+  

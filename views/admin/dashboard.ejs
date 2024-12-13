@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="bg-gray-50 font-poppins">
+  <div class="container mx-auto p-6">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+      <!-- Navigation Links -->
+      <div>
+        <a href="/admin/plans" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">View All Plans</a>
+        <a href="/admin/logout" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 ml-4">Logout</a>
+      </div>
+    </div>
+
+    <p>Total Tour Plans: <%= totalPlans %></p>
+
+    <h2 class="text-xl mt-6">Recent Submissions</h2>
+    <table class="table-auto w-full mt-4 border-collapse border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border border-gray-300 px-4 py-2">Name</th>
+          <th class="border border-gray-300 px-4 py-2">Email</th>
+          <th class="border border-gray-300 px-4 py-2">Dates</th>
+          <th class="border border-gray-300 px-4 py-2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% plans.forEach(plan => { %>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.firstName %> <%= plan.lastName %></td>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.email %></td>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.fromDate %> to <%= plan.toDate %></td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="/admin/plans/<%= plan._id %>" class="text-blue-600">View</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

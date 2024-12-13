@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Plan Details</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">Tour Plan Details</h1>
+    <p><strong>Name:</strong> <%= plan.firstName %> <%= plan.lastName %></p>
+    <p><strong>Email:</strong> <%= plan.email %></p>
+    <p><strong>Phone:</strong> <%= plan.phone %></p>
+    <p><strong>Dates:</strong> <%= plan.fromDate %> to <%= plan.toDate %></p>
+    <p><strong>Adults:</strong> <%= plan.adults %>, <strong>Children:</strong> <%= plan.children %></p>
+    <p><strong>Rooms:</strong> <%= plan.rooms %></p>
+    <p><strong>Citizenship:</strong> <%= plan.citizenship %></p>
+    <p><strong>Trip Type:</strong> <%= plan.tripType %></p>
+    <p><strong>Package:</strong> <%= plan.package %></p>
+    <p><strong>Extra Details:</strong> <%= plan.extraDetails %></p>
+
+    <div class="mt-6 flex items-center space-x-4">
+      <!-- Back to All Plans Link -->
+      <a href="/admin/plans/<%= plan._id %>" class="text-blue-600">View</a>
+        Back to All Plans
+      </a>
+
+      <!-- Delete Plan Button -->
+      <form method="POST" action="/admin/plans/<%= plan._id %>/delete" class="inline">
+        <button type="submit" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">
+          Delete Plan
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+

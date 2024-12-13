@@ -1,0 +1,15 @@
+<section>
+    <h1>All Tours</h1>
+    <div class="cards">
+      <% tours.forEach(tour => { %>
+        <div class="card">
+          <img src="<%= tour.image %>" alt="<%= tour.name %>">
+          <h3><%= tour.name %></h3>
+          <p><%= tour.description %></p>
+          <p>Price: $<%= tour.price %></p>
+          <a href="/tours/<%= tour.id %>">View Details</a>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+  

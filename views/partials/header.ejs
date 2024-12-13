@@ -1,0 +1,70 @@
+<header>
+  <!-- Top Bar -->
+  <div class="bg-themeGreen text-white py-2 px-4 lg:px-8 flex justify-between items-center text-sm">
+    <div class="contact-info">
+      <span>Call us on: +254 720 687 790 / +254 726 356 473</span>
+    </div>
+    <div class="social-icons flex space-x-4">
+      <a href="#" class="text-white hover:text-themeYellow"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white hover:text-themeYellow"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white hover:text-themeYellow"><i class="fab fa-youtube"></i></a>
+      <a href="#" class="text-white hover:text-themeYellow"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white hover:text-themeYellow"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <div class="bg-white border-b border-gray-200 py-4 px-4 lg:px-8 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/" class="text-themeGreen font-bold text-2xl">Eastgold Tours</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex space-x-8">
+      <a href="/" class="text-gray-800 hover:text-themeGreen uppercase font-medium tracking-wide">Home</a>
+      <a href="/kenya-holidays" class="text-gray-800 hover:text-themeGreen uppercase font-medium tracking-wide">Kenya Holidays</a>
+      <a href="/international" class="text-gray-800 hover:text-themeGreen uppercase font-medium tracking-wide">International</a>
+      <a href="/tours" class="text-gray-800 hover:text-themeGreen uppercase font-medium tracking-wide">Tours & Safaris</a>
+      <a href="/company" class="text-gray-800 hover:text-themeGreen uppercase font-medium tracking-wide">Our Company</a>
+    </nav>
+
+    <!-- Call-to-Action Button -->
+    <div class="cta-button hidden lg:block">
+      <a href="/create-tour-plan" class="bg-[#9c4d20] text-white px-6 py-2 rounded hover:bg-[#d06538] font-semibold">
+        Create Tour Plan
+      </a>
+    </div>
+
+    <!-- Hamburger Menu (Mobile Only) -->
+    <button id="mobile-menu-toggle" class="lg:hidden text-themeGreen">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+<!-- Mobile Navigation Overlay -->
+<div
+  id="mobile-nav"
+  class="hidden fixed inset-0 bg-themeGreen text-white z-50 flex flex-col space-y-6 p-6"
+>
+  <div class="flex justify-between items-center mb-6">
+    <!-- Create Tour Plan Button -->
+    <a href="/create-tour-plan" 
+      class="bg-[#9c4d20] text-white px-4 py-2 rounded-lg hover:bg-[#d06538] font-semibold text-sm mr-4">
+      Create Tour Plan
+    </a>
+
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="text-white text-2xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <nav class="flex flex-col space-y-4">
+    <a href="/" class="block hover:text-themeYellow">Home</a>
+    <a href="/kenya-holidays" class="block hover:text-themeYellow">Kenya Holidays</a>
+    <a href="/international" class="block hover:text-themeYellow">International</a>
+    <a href="/tours" class="block hover:text-themeYellow">Tours & Safaris</a>
+    <a href="/company" class="block hover:text-themeYellow">Our Company</a>
+  </nav>
+</div>
+</header>

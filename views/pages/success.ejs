@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/output.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f766e, #10b981);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .main-content {
+      flex: 1; /* Ensures main content takes up available space */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .success-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
+      max-width: 800px;
+      text-align: center;
+    }
+    .success-container img {
+      max-width: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="font-poppins">
+
+  <!-- Header -->
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="success-container">
+      <img
+        src="/images/thank-you.jpeg"
+        alt="Thank You"
+        class="thank-you-image"
+      />
+      <h1 class="text-4xl font-extrabold text-green-700">🎉 Success!</h1>
+      <p class="text-gray-700 text-lg">
+        <strong>Your tour plan has been submitted successfully!</strong>
+      </p>
+      <p class="text-gray-500">
+        Our team will review your request and get back to you shortly with the best options for your tour. Thank you for choosing Eastgold Tours!
+      </p>
+      <div class="button-group">
+        <a
+          href="/"
+          class="bg-themeGreen text-white text-lg font-semibold py-3 px-6 rounded-lg shadow hover:bg-green-800 transition"
+        >
+          Back to Home
+        </a>
+        <a
+          href="/create-tour-plan"
+          class="bg-yellow-500 text-black text-lg font-semibold py-3 px-6 rounded-lg shadow hover:bg-yellow-600 transition"
+        >
+          Submit Another Plan
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+</body>
+</html>

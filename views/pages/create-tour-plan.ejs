@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> <!-- Flatpickr CSS -->
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-poppins">
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold mb-6">Custom Tour Plan</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+          Let us craft a hand-tailored itinerary to delight and surprise you!
+        </p>
+      </div>
+      <form method="POST" action="/submit-tour-plan" class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-6">
+        <!-- Name Fields -->
+        <div class="flex flex-col lg:flex-row gap-4">
+          <input type="text" name="firstName" placeholder="First Name" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none" required>
+          <input type="text" name="lastName" placeholder="Last Name" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none" required>
+        </div>
+        <!-- Email and Phone -->
+        <div class="flex flex-col lg:flex-row gap-4">
+          <input type="email" name="email" placeholder="Email Address" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none" required>
+          <input type="tel" name="phone" placeholder="Phone" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none" required>
+        </div>
+        <!-- Dates -->
+        <div class="flex flex-col lg:flex-row gap-4">
+          <div class="flex-1">
+            <label for="fromDate" class="block text-sm font-medium text-gray-700">From</label>
+            <input type="text" id="fromDate" name="fromDate" class="border border-gray-300 p-3 rounded w-full focus:outline-none" required>
+          </div>
+          <div class="flex-1">
+            <label for="toDate" class="block text-sm font-medium text-gray-700">To</label>
+            <input type="text" id="toDate" name="toDate" class="border border-gray-300 p-3 rounded w-full focus:outline-none" required>
+          </div>
+        </div>
+        <!-- Adults, Children, Rooms -->
+        <div class="flex flex-col lg:flex-row gap-4">
+          <input type="number" name="adults" placeholder="Adults #" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none" required>
+          <input type="number" name="children" placeholder="Children #" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none">
+          <input type="number" name="rooms" placeholder="Rooms #" class="flex-1 border border-gray-300 p-3 rounded focus:outline-none">
+        </div>
+        <!-- Citizenship -->
+        <select name="citizenship" class="border border-gray-300 p-3 rounded focus:outline-none w-full" required>
+          <option value="" disabled selected>Choose Citizenship</option>
+          <option value="kenyan">Kenyan Citizen</option>
+          <option value="resident">Kenyan Resident</option>
+          <option value="east-africa">East Africa Resident</option>
+          <option value="non-resident">Non Resident</option>
+        </select>
+        <!-- Trip Type -->
+        <select name="tripType" class="border border-gray-300 p-3 rounded focus:outline-none w-full" required>
+          <option value="" disabled selected>Select Trip Type</option>
+          <option value="solo">Solo Traveler</option>
+          <option value="couple">Couple Traveling</option>
+          <option value="family">Family Traveling</option>
+          <option value="friends">Friends Traveling</option>
+          <option value="group">Organized Group Traveling</option>
+        </select>
+        <!-- Package -->
+        <select name="package" class="border border-gray-300 p-3 rounded focus:outline-none w-full" required>
+          <option value="" disabled selected>Select Package</option>
+          <option value="accommodation-only">Accommodation Only</option>
+          <option value="accommodation-transport">Accommodation + Transport</option>
+          <option value="accommodation-transport-game">Accommodation + Transport with Game Drives</option>
+        </select>
+        <!-- Extra Details -->
+        <textarea name="extraDetails" class="border border-gray-300 p-3 rounded focus:outline-none w-full" rows="4" placeholder="Provide more details if any"></textarea>
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-themeGreen text-white py-3 rounded hover:bg-green-700 font-bold text-lg">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fromDate = document.getElementById('fromDate');
+      const toDate = document.getElementById('toDate');
+
+      // Initialize Flatpickr
+      flatpickr(fromDate, {
+        dateFormat: "d-m-Y", // Format as Day-Month-Year
+        onChange: function(selectedDates, dateStr) {
+          toDate._flatpickr.set('minDate', dateStr); // Set minimum date for "To Date"
+        }
+      });
+
+      flatpickr(toDate, {
+        dateFormat: "d-m-Y", // Format as Day-Month-Year
+      });
+    });
+  </script>
+</body>
+</html>
+

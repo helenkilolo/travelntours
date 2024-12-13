@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Tour Plans</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">All Tour Plans</h1>
+    <table class="table-auto w-full mt-4 border-collapse border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="border border-gray-300 px-4 py-2">Name</th>
+          <th class="border border-gray-300 px-4 py-2">Email</th>
+          <th class="border border-gray-300 px-4 py-2">Dates</th>
+          <th class="border border-gray-300 px-4 py-2">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% plans.forEach(plan => { %>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.firstName %> <%= plan.lastName %></td>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.email %></td>
+            <td class="border border-gray-300 px-4 py-2"><%= plan.fromDate %> to <%= plan.toDate %></td>
+            <td class="border border-gray-300 px-4 py-2">
+              <a href="/admin/plans/<%= plan._id %>" class="text-blue-600">View</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

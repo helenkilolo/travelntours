@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Africa | Eastgold Tours</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="font-poppins bg-gray-50">
+
+  <section class="relative h-screen overflow-hidden flex items-center justify-center">
+    <!-- Video Background -->
+    <video
+      class="absolute top-0 left-0 w-full h-full object-cover"
+      src="/videos/hero-video.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+  
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center text-center text-black px-4">
+      <!-- Title -->
+      <h2 class="text-2xl lg:text-4xl italic font-light mb-2">eastgoldtours</h2>
+      <h1 class="text-4xl lg:text-6xl font-bold mb-6">Dream . Explore . Discover</h1>
+  
+      <!-- Search Form -->
+      <form
+        class="flex flex-col lg:flex-row bg-white text-black rounded-md shadow-lg overflow-hidden w-full max-w-2xl"
+      >
+        <!-- Destination Dropdown -->
+        <div class="flex items-center border-r border-gray-300 px-4 py-2 flex-grow relative">
+          <span class="text-gray-400 mr-2"><i class="fas fa-map-marker-alt"></i></span>
+          <select
+            class="focus:outline-none w-full bg-white text-gray-800"
+            aria-label="Select Destination"
+          >
+            <option value="" disabled selected>Where Destination</option>
+            <option value="kenya">Kenya</option>
+            <option value="tanzania">Tanzania</option>
+            <option value="dubai">Dubai</option>
+            <option value="paris">Paris</option>
+            <option value="new-york">New York</option>
+            <option value="maldives">Maldives</option>
+          </select>
+        </div>
+  
+        <!-- Activity Dropdown -->
+        <div class="flex items-center px-4 py-2 flex-grow relative">
+          <span class="text-gray-400 mr-2"><i class="fas fa-tags"></i></span>
+          <select
+            class="focus:outline-none w-full bg-white text-gray-800"
+            aria-label="Select Activity"
+          >
+            <option value="" disabled selected>Type Activity</option>
+            <option value="beach">Beach</option>
+            <option value="safari">Safari</option>
+            <option value="hiking">Hiking</option>
+            <option value="city-tours">City Tours</option>
+            <option value="adventure">Adventure</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
+  
+        <!-- Search Button -->
+        <button
+          type="submit"
+          class="bg-themeYellow text-black px-6 py-2 hover:bg-yellow-400 flex-shrink-0"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </section>
+<!-- About Us -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+    <div>
+      <h2 class="text-3xl font-bold text-themeGreen mb-4">Welcome to Eastgold Tours</h2>
+      <p class="text-gray-700 mb-4">
+        At Eastgold Tours, we curate experiences that connect you with Africa’s breathtaking landscapes, diverse wildlife, and vibrant cultures. From luxury safaris to beach getaways, our team is dedicated to making your dreams a reality.
+      </p>
+      <a href="/about" class="text-themeYellow font-medium hover:underline">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Us - Image Showcase -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-themeGreen text-center mb-8">Explore Kenya's Famous Parks</h2>
+
+    <!-- Image Carousel -->
+    <div class="relative">
+      <!-- Left Arrow -->
+      <button
+        id="scroll-left"
+        class="absolute left-0 z-10 p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
+        style="top: 50%; transform: translateY(-50%);"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Images Container -->
+      <div
+        id="image-container"
+        class="grid grid-flow-col gap-6 overflow-hidden"
+        style="grid-auto-columns: 33%;"
+      >
+        <!-- Single Image -->
+        <div class="relative">
+          <img
+            src="/images/masai-mara.jpeg"
+            alt="Masai Mara"
+            class="object-cover rounded-lg shadow-lg w-full h-[250px]"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-black rounded-lg"
+          >
+            <h3 class="text-lg font-bold">Masai Mara</h3>
+          </div>
+        </div>
+
+        <!-- Repeat for other images -->
+        <div class="relative">
+          <img
+            src="/images/amboseli.jpeg"
+            alt="Amboseli"
+            class="object-cover rounded-lg shadow-lg w-full h-[250px]"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-black rounded-lg"
+          >
+            <h3 class="text-lg font-bold">Amboseli</h3>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="/images/tsavo.jpeg"
+            alt="Tsavo"
+            class="object-cover rounded-lg shadow-lg w-full h-[250px]"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-black rounded-lg"
+          >
+            <h3 class="text-lg font-bold">Tsavo</h3>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="/images/lake-nakuru.jpeg"
+            alt="Lake Nakuru"
+            class="object-cover rounded-lg shadow-lg w-full h-[250px]"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-black rounded-lg"
+          >
+            <h3 class="text-lg font-bold">Lake Nakuru</h3>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="/images/samburu.jpeg"
+            alt="Samburu"
+            class="object-cover rounded-lg shadow-lg w-full h-[250px]"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-black rounded-lg"
+          >
+            <h3 class="text-lg font-bold">Samburu</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button
+        id="scroll-right"
+        class="absolute right-0 z-10 p-2 bg-gray-300 hover:bg-gray-400 rounded-full"
+        style="top: 50%; transform: translateY(-50%);"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS -->
+<style>
+  #image-container {
+    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 33%; /* Show only 3 items at a time */
+    overflow-x: hidden; /* Hide extra images */
+  }
+
+  #image-container > div {
+    scroll-snap-align: start;
+  }
+</style>
+
+<!-- Add this JavaScript -->
+<script>
+  const container = document.getElementById("image-container");
+  const leftBtn = document.getElementById("scroll-left");
+  const rightBtn = document.getElementById("scroll-right");
+
+  let currentScroll = 0;
+
+  // Scroll Left
+  leftBtn.addEventListener("click", () => {
+    const containerWidth = container.clientWidth;
+    currentScroll = Math.max(currentScroll - containerWidth, 0);
+    container.scrollTo({ left: currentScroll, behavior: "smooth" });
+  });
+
+  // Scroll Right
+  rightBtn.addEventListener("click", () => {
+    const containerWidth = container.clientWidth;
+    const maxScroll = container.scrollWidth - containerWidth;
+    currentScroll = Math.min(currentScroll + containerWidth, maxScroll);
+    container.scrollTo({ left: currentScroll, behavior: "smooth" });
+  });
+</script>
+
+
+<!-- Featured Packages -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-themeGreen text-center mb-8">Our Featured Packages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tour Package -->
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="/images/tour1.jpg" alt="Masai Mara" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-themeGreen mb-2">3-Day Masai Mara Safari</h3>
+            <p class="text-gray-600 mb-4">Immerse yourself in the heart of the African wilderness.</p>
+            <a href="/packages/masai-mara" class="text-themeYellow hover:underline">Explore Package</a>
+          </div>
+        </div>
+        <!-- Repeat for more packages -->
+      </div>
+    </div>
+  </section>
+  <!-- Explore Destinations -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold text-themeGreen">Big 5 Gems | Recommended</h2>
+      <a href="/view-all" class="text-themeYellow text-lg font-medium hover:underline flex items-center">
+        View All
+        <span class="ml-1">&rarr;</span>
+      </a>
+    </div>
+    <div class="flex flex-wrap justify-between gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden flex-shrink-0 w-[30%]">
+        <img src="/images/kenya.jpg" alt="Horseback Safari" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-gray-800">Horseback Safaris & Endless Views: Ol Donyo’s Premium Paradise</h3>
+          <p class="text-sm text-gray-600 mt-2">From <span class="text-themeYellow font-semibold">USD 4,450</span></p>
+          <a href="/details/horseback-safari" class="text-themeYellow font-medium hover:underline flex items-center mt-4">
+            More Information
+            <span class="ml-1">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden flex-shrink-0 w-[30%]">
+        <img src="/images/tanzania.jpg" alt="Samburu Package" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-gray-800">Samburu Premium Flying Package</h3>
+          <p class="text-sm text-gray-600 mt-2">From <span class="text-themeYellow font-semibold">USD 2,840</span></p>
+          <a href="/details/samburu-package" class="text-themeYellow font-medium hover:underline flex items-center mt-4">
+            More Information
+            <span class="ml-1">&rarr;</span>
+          </a>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden flex-shrink-0 w-[30%]">
+        <img src="/images/uganda.jpg" alt="Samburu Land Cruiser Safari" class="w-full h-64 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-gray-800">Samburu Land Cruiser Safari: Where Time Stands Still & Zebras Gallop Wild</h3>
+          <p class="text-sm text-gray-600 mt-2">From <span class="text-themeYellow font-semibold">USD 885</span></p>
+          <a href="/details/samburu-land-cruiser" class="text-themeYellow font-medium hover:underline flex items-center mt-4">
+            More Information
+            <span class="ml-1">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-themeGreen mb-8">Why Choose Eastgold Tours?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center">
+          <i class="fas fa-binoculars text-themeYellow text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Expert Guides</h3>
+          <p class="text-gray-600">Our team of experts ensures you have a seamless adventure.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fas fa-star text-themeYellow text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Unparalleled Experiences</h3>
+          <p class="text-gray-600">Tailored tours that match your unique travel aspirations.</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fas fa-globe text-themeYellow text-4xl mb-4"></i>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">Global Reach</h3>
+          <p class="text-gray-600">With connections across Africa, we bring you the best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-themeGreen text-center mb-8">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <p class="text-gray-700 mb-4">"This was the most amazing safari experience of our lives."</p>
+          <h3 class="text-lg font-bold text-themeGreen">- John Doe</h3>
+        </div>
+        <!-- Repeat for more testimonials -->
+      </div>
+    </div>
+  </section>
+<!-- Final Call-to-Action and Footer -->
+<section class="bg-themeGreen-light text-black">
+  <!-- Call-to-Action -->
+  <div class="text-center py-12">
+    <h2 class="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
+    <a href="/contact" class="bg-themeYellow text-black px-8 py-4 rounded hover:bg-yellow-400">Contact Us</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="container mx-auto px-6 py-12 flex flex-wrap justify-between gap-8 text-sm">
+    <!-- Left Section: Logo, Description, and Payment Partners -->
+    <div class="flex-1 min-w-[200px] max-w-[300px]">
+      <div class="flex flex-col items-center mb-6">
+        <!-- Restrict the logo size explicitly -->
+        <img src="/images/logoeastgold.jpg" alt="Eastgold Tours Logo" class="w-14 h-auto mb-4">
+        <p class="text-center">
+          At Eastgold Tours, you are assured of experiencing the African adventure in the finest way possible. 
+          With a wide range of Kenya safari packages to popular and exciting destinations, your dream holiday is sure to be unforgettable.
+        </p>
+      </div>
+    </div>
+
+    <!-- Middle Section: Top Destinations -->
+    <div class="flex-1 min-w-[180px]">
+      <h3 class="font-bold mb-4">Top Destinations</h3>
+      <ul class="space-y-2">
+        <li><a href="/destinations/diani" class="hover:underline">Diani</a></li>
+        <li><a href="/destinations/masai-mara" class="hover:underline">Masai Mara</a></li>
+        <li><a href="/destinations/malindi" class="hover:underline">Malindi</a></li>
+        <li><a href="/destinations/amboseli" class="hover:underline">Amboseli</a></li>
+        <li><a href="/destinations/samburu" class="hover:underline">Samburu</a></li>
+        <li><a href="/destinations/dubai" class="hover:underline">Dubai</a></li>
+      </ul>
+    </div>
+
+    <!-- Middle Section: Company Links -->
+    <div class="flex-1 min-w-[180px]">
+      <h3 class="font-bold mb-4">Company</h3>
+      <ul class="space-y-2">
+        <li><a href="/about" class="hover:underline">About Us</a></li>
+        <li><a href="/contact" class="hover:underline">Contact Us</a></li>
+        <li><a href="/why-choose-us" class="hover:underline">Why Choose Us</a></li>
+        <li><a href="/blog" class="hover:underline">Blog</a></li>
+        <li><a href="/create-tour" class="hover:underline">Create Customized Tour</a></li>
+        <li><a href="/faq" class="hover:underline">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section: Contact -->
+    <div class="flex-1 min-w-[200px]">
+      <h3 class="font-bold mb-4">Contact</h3>
+      <p>Victoria Plaza 5th Floor,<br>Parklands Rd, Westlands.<br>Nairobi, Kenya</p>
+      <p class="font-bold text-lg mt-4">+254 724 840 482</p>
+      <p><a href="mailto:info@eastgoldtours.com" class="hover:underline">info@eastgoldtours.com</a></p>
+    </div>
+  </div>
+
+  <!-- Payment Partners Section -->
+  <div class="bg-gray-900 py-4">
+    <div class="container mx-auto flex flex-wrap justify-between items-center text-xs text-gray-400">
+      <span>Secure online payments:</span>
+      <div class="flex space-x-4 items-center">
+        <img src="/images/visa.png" alt="Visa" class="h-6 max-w-[50px]">
+        <img src="/images/mastercard.png" alt="MasterCard" class="h-6 max-w-[50px]">
+        <img src="/images/mpesa.png" alt="Mpesa" class="h-6 max-w-[50px]">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ </body>
+</html>
+

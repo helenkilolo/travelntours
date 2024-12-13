@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="/css/output.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f3f4f6;
+    }
+    .error-message {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto p-6 flex flex-col items-center justify-center min-h-screen">
+    <!-- Logo or Header -->
+    <img src="/images/admin-logo.png" alt="Admin Logo" class="mb-6 w-20 h-20">
+    <h1 class="text-2xl font-bold mb-4">Admin Login</h1>
+    
+    <% if (error) { %>
+      <p class="text-red-500 mb-4 error-message"><%= error %></p>
+    <% } %>
+    
+    <!-- Login Form -->
+    <form method="POST" action="/admin/login" class="bg-white p-6 rounded shadow-md w-full max-w-sm">
+      <div class="mb-4">
+        <label for="username" class="block text-gray-700">Username</label>
+        <input type="text" name="username" id="username" 
+               class="border border-gray-300 p-2 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+               required>
+      </div>
+      <div class="mb-4 relative">
+        <label for="password" class="block text-gray-700">Password</label>
+        <input type="password" name="password" id="password" 
+               class="border border-gray-300 p-2 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+               required>
+        <button type="button" id="togglePassword" 
+                class="absolute top-8 right-3 text-gray-600 focus:outline-none">
+          <i class="fas fa-eye"></i>
+        </button>
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">Login</button>
+    </form>
+    
+    <!-- Footer -->
+    <footer class="mt-6 text-sm text-gray-500">
+      <p>Need help? <a href="/contact" class="text-blue-500 hover:underline">Contact Support</a></p>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+
+      // Change icon
+      togglePassword.innerHTML = 
+        type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+    });
+  </script>
+</body>
+</html>
